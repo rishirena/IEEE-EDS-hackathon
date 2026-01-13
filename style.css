@@ -2523,4 +2523,222 @@ body {
     transform: translateY(0);
   }
 }
+/* =====================================
+   MOBILE OPTIMIZATION (FINAL & SAFE)
+   ===================================== */
+@media (max-width: 768px) {
+
+  /* ===== HEADER / TOP BAR ===== */
+  .topbar {
+    height: 60px;
+    padding: 0 16px;
+  }
+
+  .brand-logos img {
+    height: 28px;   /* logos chhote */
+  }
+
+  .brand-text {
+    font-size: 14px;
+  }
+
+  nav a {
+    font-size: 13px;
+    margin-left: 12px;
+  }
+
+  /* ===== HERO SECTION ===== */
+  .hero {
+    padding: 110px 20px 80px;
+  }
+
+  .dept-tag {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .hero h1 {
+    font-size: 34px;        /* 🔥 main fix */
+    line-height: 1.15;
+  }
+
+  .hero h1 span {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ===== HERO BUTTONS ===== */
+  .hero-actions button {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
+  /* ===== HERO STATS ===== */
+  .stats {
+    gap: 22px;
+    margin-top: 28px;
+  }
+
+  .stat-box strong {
+    font-size: 22px;
+  }
+
+  .stat-box span {
+    font-size: 12px;
+  }
+
+  /* ===== HERO SLIDESHOW ===== */
+  .visual-slider {
+    max-width: 100%;
+    aspect-ratio: 16 / 10;
+  }
+
+  /* ===== SECTIONS SPACING ===== */
+  .section {
+    padding: 90px 20px;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .lead {
+    font-size: 14px;
+  }
+
+  /* ===== CARDS (TRACK / ELIGIBILITY / TEAM) ===== */
+  .track-card,
+  .eligibility-card,
+  .team-card {
+    padding: 26px;
+  }
+
+  .track-card h3,
+  .eligibility-card h3,
+  .team-card h3 {
+    font-size: 18px;
+  }
+
+  .track-card p,
+  .eligibility-card p,
+  .team-card p {
+    font-size: 14px;
+  }
+}
+/* =====================================
+   EXTRA COMPACT MOBILE (≤ 480px)
+   ===================================== */
+@media (max-width: 480px) {
+
+  /* ===== HEADER ===== */
+  .topbar {
+    height: 56px;
+    padding: 0 12px;
+  }
+
+  .brand-logos img {
+    height: 24px;     /* aur chhote logos */
+  }
+
+  .brand-text {
+    font-size: 12px;
+  }
+
+  nav a {
+    font-size: 12px;
+    margin-left: 8px;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 95px 16px 70px;
+  }
+
+  .dept-tag {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .hero h1 {
+    font-size: 28px;        /* 🔥 perfect phone size */
+    line-height: 1.2;
+  }
+
+  .hero h1 span {
+    font-size: 25px;
+  }
+
+  .hero p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  /* ===== BUTTONS ===== */
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .hero-actions button {
+    padding: 9px 16px;
+    font-size: 12px;
+  }
+
+  /* ===== STATS ===== */
+  .stats {
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .stat-box strong {
+    font-size: 20px;
+  }
+
+  .stat-box span {
+    font-size: 11px;
+  }
+
+  /* ===== SLIDESHOW ===== */
+  .visual-slider {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 18px;
+  }
+
+  /* ===== SECTIONS ===== */
+  .section {
+    padding: 75px 16px;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+
+  .lead {
+    font-size: 13px;
+  }
+
+  /* ===== CARDS ===== */
+  .track-card,
+  .eligibility-card,
+  .team-card {
+    padding: 22px;
+  }
+
+  .track-card h3,
+  .eligibility-card h3,
+  .team-card h3 {
+    font-size: 16px;
+  }
+
+  .track-card p,
+  .eligibility-card p,
+  .team-card p {
+    font-size: 13px;
+  }
+}
 

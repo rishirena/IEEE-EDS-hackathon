@@ -143,4 +143,31 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// IEEE Member ID toggle
+const ieeeSelect = document.getElementById("ieeeMember");
+const ieeeIdBox = document.getElementById("ieeeIdBox");
+
+if (ieeeSelect) {
+  ieeeSelect.addEventListener("change", () => {
+    if (ieeeSelect.value === "yes") {
+      ieeeIdBox.style.display = "block";
+    } else {
+      ieeeIdBox.style.display = "none";
+    }
+  });
+}
+
+// FORM SUBMIT HANDLING
+const form = document.querySelector("form");
+const successMessage = document.getElementById("successMessage");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // page reload stop
+
+  form.style.display = "none";        // hide form
+  successMessage.style.display = "block"; // show success message
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 

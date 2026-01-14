@@ -2742,3 +2742,15 @@ body {
   }
 }
 
+/* PERFORMANCE OPTIMIZED BACKGROUND */
+.circuit-bg {
+  animation-duration: 120s;   /* slower = less CPU */
+  opacity: 0.35;              /* lighter */
+}
+
+/* Disable on small devices */
+@media (max-width: 768px) {
+  .circuit-bg {
+    animation: none;
+  }
+}

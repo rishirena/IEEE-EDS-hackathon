@@ -78,7 +78,10 @@ if (eligibilitySection) {
 }
 // ===== NAV ACTIVE ON SCROLL (SIMPLE & RELIABLE) =====
 const navLinks = document.querySelectorAll(".topbar nav a");
-const sections = document.querySelectorAll("section[id], footer[id]");
+const sections = document.querySelectorAll(
+  "section[id]:not(#about), footer[id]"
+);
+
 
 window.addEventListener("scroll", () => {
   let current = "";
@@ -161,13 +164,69 @@ if (ieeeSelect) {
 const form = document.querySelector("form");
 const successMessage = document.getElementById("successMessage");
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault(); // page reload stop
+if (form && successMessage) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  form.style.display = "none";        // hide form
-  successMessage.style.display = "block"; // show success message
+    form.style.display = "none";
+    successMessage.style.display = "block";
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+// ===== GALLERY LOGIC =====
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const galleryPanel = document.getElementById("galleryPanel");
+  if (!galleryPanel) return;
+
+  const closeGallery = document.getElementById("closeGallery");
+  const galleryImage = document.getElementById("galleryImage");
+  const nextBtn = document.getElementById("nextImg");
+  const prevBtn = document.getElementById("prevImg");
+
+  const images = [
+  "assets/images/img1.jpg",
+  "assets/images/img2.jpg",
+  "assets/images/img3.jpg",
+  "assets/images/img4.jpg",
+  "assets/images/img5.jpg",
+  "assets/images/img6.jpg",
+  "assets/images/img7.jpg",
+  "assets/images/img8.jpg",
+  "assets/images/img9.jpg",
+  "assets/images/img10.jpg",
+  "assets/images/img11.jpg"
+];
+
+
+  let currentIndex = 0;
+
+  // 🔥 GLOBAL FUNCTION FOR NAVBAR
+  window.openGallery = function () {
+    currentIndex = 0;
+    galleryImage.src = images[currentIndex];
+    galleryPanel.classList.add("active");
+  };
+
+  closeGallery.addEventListener("click", () => {
+    galleryPanel.classList.remove("active");
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    galleryImage.src = images[currentIndex];
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    galleryImage.src = images[currentIndex];
+  });
+
 });
+
+
 
 

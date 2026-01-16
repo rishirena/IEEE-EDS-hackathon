@@ -2754,3 +2754,394 @@ body {
     animation: none;
   }
 }
+/* ===============================
+   GALLERY PANEL
+================================ */
+
+#galleryPanel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+
+  z-index: 2000;
+}
+
+/* SHOW GALLERY */
+#galleryPanel.active {
+  transform: translateX(0);
+}
+
+/* CLOSE BUTTON */
+#closeGallery {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+
+  font-size: 22px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* SLIDER */
+.gallery-slider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* IMAGE */
+.gallery-slider img {
+  max-width: 70%;
+  max-height: 70%;
+  border-radius: 14px;
+}
+
+/* NAV BUTTONS */
+.nav-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 12px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#galleryPanel {
+  transform: translateX(-100%);
+}
+
+#galleryPanel.active {
+  transform: translateX(0);
+}
+/* ===== SMALLER GALLERY IMAGE ===== */
+.gallery-slider img {
+  max-width: 60%;     /* pehle 70% tha */
+  max-height: 60%;
+  border-radius: 12px;
+}
+
+/* ===== DOTS CONTAINER ===== */
+.gallery-dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  justify-content: center;
+}
+
+/* DOT */
+.gallery-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ACTIVE DOT */
+.gallery-dots span.active {
+  background: #06b6d4;   /* IEEE cyan */
+  transform: scale(1.4);
+}
+/* ===== GLOBAL SCALE (80%) ===== */
+html {
+  zoom: 0.8;              /* Chrome, Edge, Brave */
+}
+
+/* Firefox fallback */
+@supports not (zoom: 1) {
+  body {
+    transform: scale(0.8);
+    transform-origin: top left;
+    width: 125%;
+  }
+}
+/* =====================================
+   MOBILE NAVBAR – UNDER HEADER (HORIZONTAL)
+   ===================================== */
+
+@media (max-width: 768px) {
+
+  /* Header ko column banao */
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 12px;
+  }
+
+  /* Brand (logos + text) */
+  .brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+  }
+
+  /* NAV BAR BELOW BRAND */
+  .topbar nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+
+    overflow-x: auto;        /* 🔥 horizontal scroll if needed */
+    white-space: nowrap;
+
+    padding: 6px 0;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  /* Nav links */
+  .topbar nav a {
+    font-size: 13px;
+    padding: 6px 8px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  /* Hide scrollbar (clean look) */
+  .topbar nav::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ===== HEADER BRAND TEXT ===== */
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.brand-subtitle {
+  font-size: 11px;          /* chhota text */
+  font-weight: 500;
+  color: #64748b;           /* soft grey */
+  letter-spacing: 0.3px;
+}
+@media (max-width: 768px) {
+  .brand-subtitle {
+    font-size: 10px;
+  }
+}
+/* ===============================
+   FORCE GALLERY OVERLAY (FIX)
+================================ */
+
+#galleryPanel {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateX(-100%);
+  transition: transform 0.45s ease;
+
+  z-index: 9999;
+}
+
+/* SHOW STATE */
+#galleryPanel.active {
+  transform: translateX(0);
+}
+/* ===== BIGGER GALLERY IMAGE ===== */
+.gallery-slider img {
+  max-width: 80%;        /* 🔥 pehle 60% tha */
+  max-height: 75%;
+  border-radius: 16px;
+}
+/* =====================================
+   CONTACT FOOTER – CLEAN & PROFESSIONAL
+   ===================================== */
+
+/* BRAND BLOCK */
+.contact-footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+/* FORCE social icons to right */
+.contact-footer-brand .social-icons {
+  display: flex;
+  gap: 14px;
+
+  margin-left: auto;          /* 🔥 REAL right shift */
+  margin-top: 16px;
+
+  justify-content: flex-end;
+}
+
+/* HEADINGS spacing */
+.contact-footer-block h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;        /* 🔥 space after heading */
+  letter-spacing: 0.4px;
+  color: #0f172a;
+}
+
+/* PERSON ROW (Faculty / Student / HOD) */
+.contact-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 10px 0;            /* 🔥 inside breathing */
+  margin-bottom: 12px;        /* 🔥 between persons */
+}
+
+/* Circular profile image */
+.contact-person img {
+  width: 46px;                /* slightly bigger */
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 2px solid #00629B;
+  flex-shrink: 0;
+}
+
+/* INFO BLOCK */
+.contact-person .info {
+  line-height: 1.55;          /* 🔥 removes congestion */
+}
+
+/* Name */
+.contact-person .info strong {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Email + Phone */
+.contact-person .info span {
+  display: block;
+  font-size: 13px;
+  color: #475569;
+}
+
+/* Slight separation between blocks */
+.contact-footer-block {
+  padding-right: 12px;
+}
+/* =====================================
+   FORCE CONTACT TEXT HIGHLIGHT (FINAL)
+   ===================================== */
+
+/* SECTION TITLES : HOD / FACULTY / STUDENT */
+.contact-footer-block h4 {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: #00629B !important;   /* IEEE BLUE */
+  margin-bottom: 24px !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* PERSON NAME */
+.contact-person .info strong {
+  font-size: 15.5px !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;   /* DARK TEXT */
+}
+
+/* EMAIL & PHONE */
+.contact-person .info span {
+  font-size: 13.5px !important;
+  color: #334155 !important;   /* DARK GREY */
+}
+
+/* OPTIONAL: position-like emphasis (subtle line) */
+.contact-footer-block h4::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  margin-top: 6px;
+  background: linear-gradient(90deg, #00629B, #0ea5e9);
+  border-radius: 2px;
+}
+/* =====================================
+   FORCE CONTACT TEXT COLORS (FINAL)
+   ===================================== */
+
+/* POSITION / SECTION TITLES */
+.contact-footer-block h4 {
+  color: #00629B !important;
+  font-weight: 800 !important;
+}
+
+/* PERSON NAME */
+.contact-footer .contact-person .info strong {
+  color: #020617 !important;      /* 🔥 dark navy */
+  font-weight: 700 !important;
+  font-size: 15.5px !important;
+}
+
+/* EMAIL + PHONE */
+.contact-footer .contact-person .info span {
+  color: #1e293b !important;      /* 🔥 readable dark */
+  font-size: 13.5px !important;
+}
+/* =====================================================
+   FINAL CONTACT FOOTER COLOR OVERRIDE (ONE SOURCE)
+   ===================================================== */
+
+#contact {
+  color: #1e293b;
+}
+
+/* SECTION HEADINGS */
+#contact .contact-footer-block h4 {
+  color: #00629B !important;      /* IEEE BLUE */
+  font-weight: 800 !important;
+  font-size: 18px !important;
+  letter-spacing: 0.5px;
+}
+
+/* NAMES (HOD / FACULTY / STUDENTS) */
+#contact .contact-person strong {
+  color: #020617 !important;      /* DARK BLACK */
+  font-weight: 700 !important;
+  font-size: 15.5px !important;
+}
+
+/* EMAIL + PHONE */
+#contact .contact-person span {
+  color: #334155 !important;      /* DARK GREY */
+  font-size: 13.5px !important;
+}
+

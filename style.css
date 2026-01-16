@@ -3144,4 +3144,130 @@ html {
   color: #334155 !important;      /* DARK GREY */
   font-size: 13.5px !important;
 }
+/* =====================================================
+   MOBILE NAV – NAVIGATION BELOW HEADING (FINAL FIX)
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  /* Header becomes vertical */
+  .topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 10px 14px;
+    background: #ffffff;
+    z-index: 2000;
+  }
+
+  /* BRAND / HEADING */
+  .brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  /* NAV UNDER BRAND */
+  .topbar nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 8px;              /* 🔥 heading ke niche */
+    padding-top: 8px;
+
+    gap: 14px;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    border-top: 1px solid #e5e7eb;
+  }
+
+  /* NAV LINKS */
+  .topbar nav a {
+    font-size: 13px;
+    padding: 6px 8px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  /* Hide scrollbar */
+  .topbar nav::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 120px;   /* enough space for heading + nav */
+  }
+}
+/* =====================================================
+   MOBILE NAVIGATION – BELOW HEADING (FINAL & WORKING)
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  .topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 10px 14px;
+    background: #ffffff;
+    z-index: 3000;
+  }
+
+  /* BRAND */
+  .brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* NAV BELOW BRAND */
+  .main-nav {
+    width: 100%;
+    display: flex;
+    gap: 14px;
+
+    margin-top: 8px;
+    padding-top: 8px;
+
+    overflow-x: auto;
+    white-space: nowrap;
+
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .main-nav a {
+    font-size: 13px;
+    padding: 6px 8px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
 

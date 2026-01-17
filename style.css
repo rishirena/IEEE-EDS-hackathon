@@ -625,122 +625,7 @@ nav a {
 
 
 
-/* ===== FINAL CONTACT FOOTER (CLEAN & WORKING) ===== */
 
-.contact-footer {
-  background: radial-gradient(circle at top, #020617, #000814);
-  padding: 100px 40px 40px;
-  color: #cbd5f5;
-}
-
-.contact-footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr 1fr;
-  gap: 60px;
-}
-
-/* BRAND */
-.contact-footer-brand h3 {
-  font-size: 24px;
-  margin-bottom: 16px;
-  color: #e5f6ff;
-}
-
-.contact-footer-brand p {
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-
-.contact-footer-brand .accent {
-  color: #06b6d4;
-}
-
-/* SOCIAL ICONS */
-.social-icons {
-  display: flex;
-  gap: 14px;
-}
-
-.social-icons a {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(6, 182, 212, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #67e8f9;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-  background: rgba(6, 182, 212, 0.35);
-  transform: translateY(-3px);
-}
-
-/* BLOCKS */
-.contact-footer-block h4 {
-  font-size: 16px;
-  margin-bottom: 14px;
-  color: #e5f6ff;
-}
-
-.contact-footer-block p {
-  font-size: 14px;
-  margin-bottom: 6px;
-  color: #cbd5f5;
-}
-
-/* BOTTOM BAR */
-.contact-footer-bottom {
-  max-width: 1200px;
-  margin: 60px auto 0;
-  padding-top: 30px;
-  border-top: 1px solid rgba(148, 163, 184, 0.2);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.contact-footer-bottom p {
-  font-size: 14px;
-  color: #94a3b8;
-}
-
-.contact-footer-links {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.contact-footer-links a {
-  color: #94a3b8;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.contact-footer-links a:hover {
-  color: #67e8f9;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-  .contact-footer-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .contact-footer-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
-}
 .dept-tag.glow {
   text-shadow: 0 0 12px rgba(6, 182, 212, 0.6);
 }
@@ -1273,21 +1158,7 @@ body {
     justify-content: center;
   }
 }
-/* ===== CONTACT SECTION – STATIC BACKGROUND ===== */
 
-#contact {
-  background: #020617;          /* plain dark */
-  position: relative;
-  z-index: 1;
-}
-/* Disable animated circuit behind contact section */
-#contact::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #020617;
-  z-index: -1;
-}
 /* ===== NAV UNDERLINE ACTIVE INDICATOR ===== */
 
 .topbar nav a {
@@ -2983,167 +2854,7 @@ html {
   max-height: 75%;
   border-radius: 16px;
 }
-/* =====================================
-   CONTACT FOOTER – CLEAN & PROFESSIONAL
-   ===================================== */
 
-/* BRAND BLOCK */
-.contact-footer-brand {
-  display: flex;
-  flex-direction: column;
-}
-
-/* FORCE social icons to right */
-.contact-footer-brand .social-icons {
-  display: flex;
-  gap: 14px;
-
-  margin-left: auto;          /* 🔥 REAL right shift */
-  margin-top: 16px;
-
-  justify-content: flex-end;
-}
-
-/* HEADINGS spacing */
-.contact-footer-block h4 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 20px;        /* 🔥 space after heading */
-  letter-spacing: 0.4px;
-  color: #0f172a;
-}
-
-/* PERSON ROW (Faculty / Student / HOD) */
-.contact-person {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-
-  padding: 10px 0;            /* 🔥 inside breathing */
-  margin-bottom: 12px;        /* 🔥 between persons */
-}
-
-/* Circular profile image */
-.contact-person img {
-  width: 46px;                /* slightly bigger */
-  height: 46px;
-  border-radius: 50%;
-  object-fit: cover;
-
-  border: 2px solid #00629B;
-  flex-shrink: 0;
-}
-
-/* INFO BLOCK */
-.contact-person .info {
-  line-height: 1.55;          /* 🔥 removes congestion */
-}
-
-/* Name */
-.contact-person .info strong {
-  display: block;
-  font-size: 14.5px;
-  font-weight: 600;
-  color: #0f172a;
-}
-
-/* Email + Phone */
-.contact-person .info span {
-  display: block;
-  font-size: 13px;
-  color: #475569;
-}
-
-/* Slight separation between blocks */
-.contact-footer-block {
-  padding-right: 12px;
-}
-/* =====================================
-   FORCE CONTACT TEXT HIGHLIGHT (FINAL)
-   ===================================== */
-
-/* SECTION TITLES : HOD / FACULTY / STUDENT */
-.contact-footer-block h4 {
-  font-size: 18px !important;
-  font-weight: 800 !important;
-  color: #00629B !important;   /* IEEE BLUE */
-  margin-bottom: 24px !important;
-  letter-spacing: 0.5px !important;
-}
-
-/* PERSON NAME */
-.contact-person .info strong {
-  font-size: 15.5px !important;
-  font-weight: 700 !important;
-  color: #0f172a !important;   /* DARK TEXT */
-}
-
-/* EMAIL & PHONE */
-.contact-person .info span {
-  font-size: 13.5px !important;
-  color: #334155 !important;   /* DARK GREY */
-}
-
-/* OPTIONAL: position-like emphasis (subtle line) */
-.contact-footer-block h4::after {
-  content: "";
-  display: block;
-  width: 36px;
-  height: 3px;
-  margin-top: 6px;
-  background: linear-gradient(90deg, #00629B, #0ea5e9);
-  border-radius: 2px;
-}
-/* =====================================
-   FORCE CONTACT TEXT COLORS (FINAL)
-   ===================================== */
-
-/* POSITION / SECTION TITLES */
-.contact-footer-block h4 {
-  color: #00629B !important;
-  font-weight: 800 !important;
-}
-
-/* PERSON NAME */
-.contact-footer .contact-person .info strong {
-  color: #020617 !important;      /* 🔥 dark navy */
-  font-weight: 700 !important;
-  font-size: 15.5px !important;
-}
-
-/* EMAIL + PHONE */
-.contact-footer .contact-person .info span {
-  color: #1e293b !important;      /* 🔥 readable dark */
-  font-size: 13.5px !important;
-}
-/* =====================================================
-   FINAL CONTACT FOOTER COLOR OVERRIDE (ONE SOURCE)
-   ===================================================== */
-
-#contact {
-  color: #1e293b;
-}
-
-/* SECTION HEADINGS */
-#contact .contact-footer-block h4 {
-  color: #00629B !important;      /* IEEE BLUE */
-  font-weight: 800 !important;
-  font-size: 18px !important;
-  letter-spacing: 0.5px;
-}
-
-/* NAMES (HOD / FACULTY / STUDENTS) */
-#contact .contact-person strong {
-  color: #020617 !important;      /* DARK BLACK */
-  font-weight: 700 !important;
-  font-size: 15.5px !important;
-}
-
-/* EMAIL + PHONE */
-#contact .contact-person span {
-  color: #334155 !important;      /* DARK GREY */
-  font-size: 13.5px !important;
-}
 /* =====================================================
    MOBILE NAV – NAVIGATION BELOW HEADING (FINAL FIX)
    ===================================================== */
@@ -3269,5 +2980,240 @@ html {
   }
 }
 
+/* ===============================
+   GALLERY PAGE
+================================ */
 
+.gallery-section {
+  padding: 80px 32px;
+}
 
+.gallery-section.alt {
+  background: #f8fafc;
+}
+
+.gallery-section h3 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 40px;
+  color: #00629B;
+}
+
+/* GRID */
+.gallery-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* IMAGE */
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.04);
+}
+
+/* ===============================
+   CONTACT FOOTER – SINGLE SOURCE
+================================ */
+
+#contact {
+  background: #020617;
+  padding: 100px 40px 40px;
+  color: #cbd5f5;
+}
+
+.contact-footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  gap: 60px;
+}
+
+/* BRAND */
+.contact-footer-brand h3 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.contact-footer-brand .accent {
+  color: #06b6d4;
+}
+
+.contact-footer-brand p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #94a3b8;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+/* SECTION HEADINGS */
+.contact-footer-block h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #06b6d4;
+  margin-bottom: 24px;
+}
+
+/* PERSON */
+.contact-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.contact-person img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #06b6d4;
+}
+
+/* NAME */
+.contact-person strong {
+  display: block;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* EMAIL / PHONE */
+.contact-person span {
+  display: block;
+  font-size: 13.5px;
+  color: #94a3b8;
+}
+
+/* FOOTER BOTTOM */
+.contact-footer-bottom {
+  margin-top: 60px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(148,163,184,0.2);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .contact-footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+}
+/* ===============================
+   TEAM SECTION – FINAL POLISH
+================================ */
+
+.team-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.team-card.large {
+  background: #ffffff;
+  padding: 44px;
+  border-radius: 22px;
+  min-height: 560px;
+
+  border: 1px solid rgba(0,98,155,0.25);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+}
+
+.team-card h3 {
+  font-size: 22px;
+  margin-bottom: 26px;
+  color: #0f172a;
+}
+
+.sub-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #00629B;
+  margin-bottom: 16px;
+  letter-spacing: 0.4px;
+}
+
+.person-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.person-row img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00629B;
+  flex-shrink: 0;
+}
+
+.person-row strong {
+  display: block;
+  font-size: 15.5px;
+  color: #0f172a;
+}
+
+.person-row span {
+  display: block;
+  font-size: 13.5px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.team-card hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 22px 0;
+}
+
+.team-card.featured {
+  border: 2px solid #00629B;
+  box-shadow: 0 28px 60px rgba(0,98,155,0.18);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card.large {
+    padding: 32px;
+    min-height: auto;
+  }
+}
